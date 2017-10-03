@@ -1,0 +1,28 @@
+body {
+
+    background-color: black;
+}
+
+.hero-container {
+        width: 100%;
+        max-width: 1920px;
+        height: 620px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        background-color: white;
+}
+
+.hero-contents {
+    background-image: url(../images/main-background-1440-large.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-logo {
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
