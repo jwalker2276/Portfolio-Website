@@ -1,0 +1,139 @@
+/*
+Colors
+#0E0108
+#f0f0f1
+#212f41
+#d78a2b
+#d67c1f
+*/
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+    background-color: #f0f0f1;
+    font-family: 'Muli', sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+/*Brand color*/
+.navbar-default .navbar-brand {
+    color: #f0f0f1;
+    text-transform: uppercase;
+}
+
+.navbar-transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-toggle {
+    border: 0;
+
+    outline: 0 !important;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 1240px;
+}
+
+.bkg-img {
+    height: 100%;
+    max-height: 1240px;
+    background-image: url(../images/hero-large.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-contents {
+    padding-top: 20%;
+}
+
+@media (max-width:  1024px) {
+        .hero-contents {
+            padding-top: 20%;
+        }
+}
+
+@media (max-width:  768px) {
+        .hero-contents {
+            padding-top: 25%;
+        }
+}
+
+@media (max-width:  425px) {
+        .hero-contents {
+            padding-top: 40%;
+        }
+}
+
+@media (max-width:  320px) {
+        .hero-contents {
+            padding-top: 60%;
+        }
+}
+
+h1 {
+    font-size: 60px;
+    color: #f0f0f1;
+}
+
+h2 {
+    font-size: 50px;
+    color: #f0f0f1;
+}
+
+h3 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #0E0108;
+}
+
+p {
+        font-size: 16px;
+}
+
+
+.centered-text {
+    text-align: center;
+}
+
+.thumbnail {
+    margin-top: 20px;
+}
+
+.social-icons {
+    font-size: 16px;
+}
+
+/*Section size adjustments*/
+#my-work-header {
+    min-height: 280px;
+}
+
+#sec-work-together {
+    min-height: 200px;
+}
+
+#sec-footer {
+    min-height: 100px;
+}
+
+/*Testing tools*/
+.box-size-red {
+    background-color: #f0f0f1;
+}
+
+.box-size-blue {
+    background-color: #212f41;
+}
