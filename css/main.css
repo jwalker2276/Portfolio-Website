@@ -100,9 +100,8 @@ h3 {
 }
 
 p {
-        font-size: 16px;
+    font-size: 16px;
 }
-
 
 .centered-text {
     text-align: center;
@@ -113,12 +112,26 @@ p {
 }
 
 .social-icons {
-    font-size: 16px;
+    font-size: 30px;
 }
+
+.skill-icons {
+    font-size: 50px;
+}
+
+/*Colors*/
+.attention-color {
+    background-color: #d78a2b;
+}
+
 
 /*Section size adjustments*/
 #my-work-header {
     min-height: 280px;
+}
+
+#my-skills {
+    min-height: 200px;
 }
 
 #sec-work-together {
