@@ -1,144 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>jwalkercreations.com</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://use.fontawesome.com/0bc9b90e1c.js"></script>
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
     </head>
 
     <body>
-        <!-- TODO: Make nav have white background after scrolling past main image  -->
-        <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="http://www.jwalkercreations.com">jwalkercreations</a>
-                    <!-- Navbar button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+
+        <header id="nav-bar">
+            <nav>
+                <h2 id="brand">jwalkercreations</h2>
+                <ul class="nav-list">
+                    <li class="active">Home</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>About</li>
+                    <li>Resume</li>
+                    <li>Contact</li>
+                </ul>
+                <i class="fa fa-bars fa-2x nav-btn" aria-hidden="true" onclick="showNav()"></i>
+            </nav>
+        </header>
+
+        <section id="hero" class="flex"> <!-- TODO: Canvas, animations -->
+            <div id="center-info">
+                <p>Hello, I'm <span class="name-color-change">Jordan Walker</span>.</p>
+                <p>Front-End Developer / Designer</p>
+                <button>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>Contact me<i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="skills"> <!-- TODO: Content -->
+            <h1>Skills</h1>
+            <div class="accent"></div>
+            <div class="flex">
+                <div class="skill-set">
+                    <i class="fa fa-paint-brush skill-icon" aria-hidden="true"></i><!-- TODO: change icon -->
+                    <h2>Design</h2>
+                    <p>I love transforming ideas into clean intuitive experiences and learning about the latest ui/ux designs.</p>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-                  <ul class="nav navbar-nav">
-                      <li><a href="#">My Work</a></li>
-                      <li><a href="#">What I Offer</a></li>
-                      <li><a href="#">Contact Me</a></li>
-                  </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <!-- Hero section -->
-        <div class="wrapper">
-            <div class="bkg-img">
-                <div class="hero-contents centered-text">
-                    <h1>Hello, I'm Jordan</h1>
-                    <h2>Front-end Developer / Designer</h2>
+                <div class="skill-set">
+                    <i class="fa fa-code skill-icon" aria-hidden="true"></i>
+                    <h2>Code</h2>
+                    <p>My first love is coding wheather its starting a project from scratch or working with a popular framework.</p>
                 </div>
             </div>
+            <div class="skill-bars-container">
+                <div class="skill-bar">
+                    <div class="title-box">html</div>
+                    <div class="skill-fill-1"></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="title-box">css</div>
+                    <div class="skill-fill-2"></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="title-box">javascript</div>
+                    <div class="skill-fill-3"></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="title-box">jquery</div>
+                    <div class="skill-fill-4"></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="title-box">photoshop</div>
+                    <div class="skill-fill-5"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects"> <!-- TODO: animations, hover, images and content-->
+            <h1>Projects</h1>
+            <div class="accent"></div>
+            <div id="grid">
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-wide">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-wide">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-reg">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+                <div class="image img-wide">
+                    <div class="img-info">
+                        <h3>Project Name</h3>
+                        <button type="button" name="button">Check it out</button>
+                        <h4>Project Desciption</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about"> <!-- TODO: Images and responsive spacing -->
+            <h1>About</h1>
+            <div class="accent"></div>
+            <div class="flex">
+                <img id="about-left" src="images/ProfilePic.jpg" alt="">
+                <div id="about-right">
+                    <p>Since 2010, I have been creating digital works of art.</p>
+                    <p>I have worked with almost every patform creating webpages, mobile apps, video games, 2d textures and 3d models.</p>
+                    <p>I have aurthored software with C++, C#, Java, Javascript, HTML5, CSS3, Python and Assembly.</p>
+                    <p>I have designed using Adobe Photoshop, Adobe Illustrator and Unity.
+                    <div>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                        <p><a href="#">What to see my resume?</a></p>
+                        <!-- <i class="fa fa-file-text fa-2x" aria-hidden="true"></i> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <img class="transition-img"src="images/pagearrow.svg" alt="">
         </div>
-        <!-- End of hero section -->
 
-        <!-- Main container  -->
-        <div class="container">
-            <!-- My work section  -->
-            <div class="row centered-text margin-space-lg" id="my-work-header">
-                <div class="col-md-12">
-                    <h3>My Work</h3>
-                </div>
-            </div>
+        <section id="contact">
+            <h1>Contact me</h1>
+            <div class="accent"></div>
+            <form action="index.html" method="post">
+                <input type="text" name="" value="" placeholder="Name">
+                <input type="text" name="" value="" placeholder="Email">
+                <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
+                <button type="button" name="button">Send</button>
+            </form>
+        </section>
 
-            <div class="row centered-text margin-space-lg">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="http://via.placeholder.com/200x200" alt="">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="btn btn-default btn-lg" href="#">Visit</a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="http://via.placeholder.com/200x200" alt="">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="btn btn-default btn-lg" href="#">Visit</a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="http://via.placeholder.com/200x200" alt="">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="btn btn-default btn-lg" href="#">Visit</a>
-                    </div>
-                </div>
-            <!-- End of My work section -->
-            </div>
+        <footer>
+            <p>Made with love by <span class="name-color-change">Jordan Walker</span> 2017</p>
+        </footer>
 
-            <div class="row centered-text margin-space-lg" id="my-skills-header">
-                <div class="col-md-12">
-                    <h3>What I Offer</h3>
-                </div>
-            </div>
 
-            <!-- What I offer -->
-            <div class="row centered-text margin-space-lg" id="my-skills">
-                <div class="col-sm-4">
-                    <div class="skill-icons">
-                        <i class="fa fa-code skill-icons margin-space-lg" aria-hidden="true"></i>
-                        <p>Writing code is my passion and what I love doing most.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="skill-icons">
-                        <i class="fa fa-paint-brush skill-icons margin-space-lg" aria-hidden="true"></i>
-                        <p>Need something designed or wireframed? No problem, I have design skills too.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="skill-icons">
-                        <i class="fa fa-wrench skill-icons margin-space-lg" aria-hidden="true"></i>
-                        <p>What tools do you use? Right now I'm using Bootstrap and git but I'm always looking for something better.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End of what I offer -->
-
-            <!-- Work together section  -->
-            <div class="row centered-text margin-space-lg attention-color" id="sec-work-together">
-                <div class="col-md-12 margin-space-lg">
-                        <p id="work-together-banner">Want to work together?</p>
-                        <p id="work-together-text">I'm currently looking for new projects and would love to hear from you.</p>
-                        <button type="button" class="btn btn-default btn-lg">Contact Me</button>
-                </div>
-            </div>
-            <!-- End work together section  -->
-            <!-- Footer -->
-            <div class="row centered-text margin-space-lg" id="sec-footer">
-                <div class="col-md-12">
-                    <p>Crafted by me. <span><i class="fa fa-copyright" aria-hidden="true"></i></span> 2017</p>
-                    <div class="social-icons">
-                        <a href="https://github.com/jwalker2276"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        <a href="https://www.linkedin.com/in/jordan-walker-85246458/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End of footer -->
-        </div> <!--End of Container-->
-
-        <!-- Scripts -->
-        <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://use.fontawesome.com/0bc9b90e1c.js"></script>
-
-        <!-- End of body -->
-  </body>
-
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jevents.js"></script>
+    </body>
 </html>
