@@ -57,6 +57,35 @@ button:focus {
     outline: none;
 }
 
+/*General Animations*/
+.animation-element.slide-left {
+    transform: translateX(-1500px);
+    transition: transform 1s ease-in-out;
+}
+
+.animation-element.slide-right {
+    transform: translateX(1500px);
+    transition: transform 1s ease-in-out;
+}
+
+.animation-element.slide-left.animated,
+.animation-element.slide-right.animated {
+    transform: translateX(0px);
+}
+
+/*Accent under each section title*/
+.animation-element.accent {
+    background-color: #e52020;
+    width: 0px;
+    height: 5px;
+    margin: 5px auto 50px;
+    transition: width .5s linear 1s;
+}
+
+.animation-element.accent.animated {
+    width: 65px;
+}
+
 /*Section Titles*/
 h1 {
     font-family: 'Muli', sans-serif;
@@ -65,14 +94,6 @@ h1 {
     font-size: 48px;
     text-align: center;
     text-transform: uppercase;
-}
-
-/*Accent under each section title*/
-.accent {
-    background-color: #e52020;
-    width: 65px;
-    height: 5px;
-    margin: 5px auto 50px;
 }
 
 h2 {
@@ -350,12 +371,12 @@ button:hover i:nth-of-type(2) {
 }
 
 .img-info h3{
-    transform: translateX(-350px);
+    transform: translateX(-500px);
     transition: transform .5s ease-in-out;
 }
 
  .img-info h4  {
-     transform: translateX(350px);
+     transform: translateX(500px);
      transition: transform .5s ease-in-out;
  }
 
