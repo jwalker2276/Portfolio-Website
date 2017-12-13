@@ -110,7 +110,7 @@ header {
     text-transform: uppercase;
     font-size: 16px;
     width: 60%;
-    padding: 0px 20%;
+    padding: 10px 20%;
     margin: auto;
 }
 
@@ -135,7 +135,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    }
+}
 
 nav ul li {
     padding: 0 0 0 24px;
@@ -148,6 +148,10 @@ nav ul li {
 
 .show {
     height: 280px;
+}
+
+.active {
+    color: #e52020;
 }
 
 @media screen and (max-width: 1150px) {
@@ -416,22 +420,22 @@ button:hover i:nth-of-type(2) {
     background-image: url(../images/project3.jpg);
 }
 .image:nth-of-type(4) {
-    background-image: url(../images/project2w.jpg);
+    background-image: url(../images/project4w.jpg);
 }
 .image:nth-of-type(5) {
-    background-image: url(../images/project1.jpg);
+    background-image: url(../images/project5.jpg);
 }
 .image:nth-of-type(6) {
-    background-image: url(../images/project3.jpg);
+    background-image: url(../images/project6.jpg);
 }
 .image:nth-of-type(7) {
-    background-image: url(../images/project1.jpg);
+    background-image: url(../images/project7.jpg);
 }
 .image:nth-of-type(8) {
-    background-image: url(../images/project3.jpg);
+    background-image: url(../images/project8.jpg);
 }
 .image:nth-of-type(9) {
-    background-image: url(../images/project2w.jpg);
+    background-image: url(../images/project9w.jpg);
 }
 
 
