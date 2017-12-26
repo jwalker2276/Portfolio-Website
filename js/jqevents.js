@@ -1,6 +1,14 @@
 var $animation_elements = $('.animation-element');
 var $win = $(window);
 
+//Onclick event listener for scrolling
+$('.section-link').click(function(){
+    var section = $(this).attr("dest");
+    $('html, body').animate({
+        scrollTop: $('#' + section).offset().top}, 400);
+});
+
+//Fucntion checks to see if section is in view for animations
 function check_if_in_view() {
     var win_height = $win.height();
     var win_top_position = $win.scrollTop();
@@ -29,8 +37,10 @@ function check_if_in_view() {
         highlight_nav_link('projects');
     } else if(highlight_position > $('#skills').offset().top) {
         highlight_nav_link('skills');
+        border_accent('show');
     } else if(highlight_position > $('#hero').offset().top) {
-        highlight_nav_link('home');
+        highlight_nav_link('hero');
+        border_accent('hide');
     }
 }
 
@@ -38,6 +48,14 @@ function check_if_in_view() {
 function highlight_nav_link(section_name) {
     $('li.active').removeClass('active');
     $('li[dest='+section_name+']').addClass('active');
+}
+
+function border_accent(command) {
+    if(command === 'show') {
+        $('header nav').addClass('border-accent');
+    } else {
+        $('header nav').removeClass('border-accent');
+    }
 }
 
 $win.on('scroll resize', check_if_in_view);

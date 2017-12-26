@@ -94,6 +94,7 @@ h1 {
     font-size: 48px;
     text-align: center;
     text-transform: uppercase;
+
 }
 
 h2 {
@@ -110,8 +111,9 @@ header {
     text-transform: uppercase;
     font-size: 16px;
     width: 60%;
-    padding: 10px 20%;
+    padding: 10px 20% 0;
     margin: auto;
+    z-index: 100;
 }
 
 nav {
@@ -119,9 +121,8 @@ nav {
     justify-content:space-between;
     padding: 5px 10px;
     background-color:  #393e41;
-    /*make border happen at a scroll position*/
-    /*border-bottom: 4px solid #e52020;*/
     opacity: 0.9;
+    max-width: 1120px;
 }
 
 #brand {
@@ -152,6 +153,11 @@ nav ul li {
 
 .active {
     color: #e52020;
+}
+
+.border-accent {
+    border-bottom: 4px solid #e52020;
+    transition: border-bottom .25s ease-in-out 1s;
 }
 
 @media screen and (max-width: 1150px) {
