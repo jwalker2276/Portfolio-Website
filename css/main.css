@@ -140,11 +140,13 @@ nav ul {
 
 nav ul li {
     padding: 0 0 0 24px;
+    cursor: pointer;
 }
 
 .nav-btn {
     padding: 0;
     display: none;
+    cursor: pointer;
 }
 
 .show {
@@ -232,6 +234,7 @@ section:first-of-type div button {
     text-transform: uppercase;
     font: inherit;
     font-size: 24px;
+    cursor: pointer;
     transition: background-color 1s ease-in-out,
     border-color 1s ease-in-out,
     box-shadow .2s ease-in-out,
@@ -401,6 +404,7 @@ button:hover i:nth-of-type(2) {
 .img-info button {
     flex-basis: auto;
     font-size: 16px;
+    cursor: pointer;
     background-color: rgba(0,0,0,0);
     border: 0px solid rgba(0,0,0,0);
     color: rgba(0,0,0,0);
@@ -414,7 +418,6 @@ button:hover i:nth-of-type(2) {
     border: 2px solid #fdf9ff;
     color: #fdf9ff;
 }
-
 
 .image:nth-of-type(1) {
     background-image: url(../images/project1.jpg);
@@ -443,7 +446,6 @@ button:hover i:nth-of-type(2) {
 .image:nth-of-type(9) {
     background-image: url(../images/project9w.jpg);
 }
-
 
 .img-reg {
     flex-basis: 25%;
@@ -584,6 +586,7 @@ form button {
     text-transform: uppercase;
     font: inherit;
     font-size: 18px;
+    cursor: pointer;
     transition: background-color 1s ease-in-out,
     border-color 1s ease-in-out,
     box-shadow .2s ease-in-out,

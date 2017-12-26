@@ -8,6 +8,12 @@ $('.section-link').click(function(){
         scrollTop: $('#' + section).offset().top}, 400);
 });
 
+// Onclick event listener for main contact button
+$('#center-info button').click(function () {
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top}, 800);
+});
+
 //Fucntion checks to see if section is in view for animations
 function check_if_in_view() {
     var win_height = $win.height();
