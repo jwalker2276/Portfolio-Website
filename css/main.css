@@ -226,7 +226,7 @@ section:nth-of-type(1) div p {
     color:  #fdf9ff;
 }
 
-section:first-of-type div button {
+.contact-me-btn {
     padding: 10px 0px;
     background-color: rgba(0,0,0,0);
     border: 2px solid #fdf9ff;
@@ -241,31 +241,31 @@ section:first-of-type div button {
     transform .2s linear;
 }
 
-section:first-of-type div button:hover {
+.contact-me-btn:hover {
     background-color: #e52020;
     border-color: rgba(0,0,0,0);
     box-shadow: 5px 5px rgba(0,0,0,.3);
 }
 
-section:first-of-type div button:active {
+.contact-me-btn:active {
   box-shadow: 0px 0px rgba(0,0,0,.3);
   transform: translateY(5px);
 }
 
-button i {
+.contact-me-btn i {
     padding: 0 10px;
     transition: transform .5s ease-in-out, padding 1s ease-in-out;
 }
 
-button:hover i {
+.contact-me-btn:hover i {
     padding: 0 20px;
 }
 
-button:hover i:nth-of-type(1) {
+.contact-me-btn:hover i:nth-of-type(1) {
     transform: rotate(-0.25turn);
 }
 
-button:hover i:nth-of-type(2) {
+.contact-me-btn:hover i:nth-of-type(2) {
     transform: rotate(0.25turn);
 }
 
@@ -480,10 +480,6 @@ button:hover i:nth-of-type(2) {
     color: #393e41;
 }
 
-#about div.flex {
-
-}
-
 #about div.flex img {
     max-height: 400px;
 }
@@ -506,32 +502,56 @@ section:nth-of-type(4) div:nth-of-type(2){
     }
 }
 
-#about div img {
-
-}
-
 #about-right {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    padding: 30px 30px 0 30px;
-    background-color: #e6e3e8;
+    justify-content: center;
+    padding: 0 30px 0 30px;
     text-align: center;
 }
 
 #about-right p{
-    margin-bottom: 10px;
+    margin: 5px 0;
     line-height: 150%;
 }
 
-div > button {
-    flex-basis: 150px;
-    font-size: 20px;
-    background-color: #393e41;
-    color: #fdf9ff;
-    text-transform: uppercase;
-    padding: 10px;
+#about-right div {
+    padding-top: 20px;
+}
+
+.find-me-btn{
+    font-size: 16px;
+    width: 100px;
+    border: 2px solid #393e41;
+    background-color: rgba(0,0,0,0);
+    color:  #393e41;
+    padding: 10px 2px;
+    margin: 2px 0;
     border-radius: 0;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out,
+    border-color .25s ease-in-out,
+    box-shadow .2s ease-in-out,
+    color .25s ease-in-out,
+    transform .2s linear;
+}
+
+.find-me-btn:hover {
+    background-color: #393e41;
+    border-color: rgba(0,0,0,0);
+    color: #fdf9ff;
+    transform: translateY(-5px);
+    box-shadow: 5px 5px rgba(0,0,0,.3);
+}
+
+.find-me-btn:active {
+  box-shadow: 0px 0px rgba(0,0,0,.3);
+  transform: translateY(5px);
+}
+
+.find-me-btn i {
+    padding: 0 10px 0 0;
 }
 
 /*Transition Image styles*/
@@ -568,15 +588,6 @@ input, textarea {
     background-color: #fdf9ff;
     color: #393e41;
 }
-
-/*form > button {
-    background-color: #e52020;
-    color: #fdf9ff;
-    padding: 10px 30px;
-    font-size: 12px;
-    border: 0;
-
-}*/
 
 form button {
     padding: 5px 10px;
