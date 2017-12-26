@@ -149,8 +149,12 @@ nav ul li {
     cursor: pointer;
 }
 
+.nav-list {
+    transition: height .75s ease-in-out;
+}
+
 .show {
-    height: 280px;
+    height: 225px;
 }
 
 .active {

@@ -14,7 +14,12 @@ $('#center-info button').click(function () {
         scrollTop: $('#contact').offset().top}, 800);
 });
 
-//Fucntion checks to see if section is in view for animations
+$('.nav-btn').click(function () {
+    $('.nav-list').toggleClass("show");
+});
+
+
+//Function checks to see if section is in view for animations
 function check_if_in_view() {
     var win_height = $win.height();
     var win_top_position = $win.scrollTop();
