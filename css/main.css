@@ -584,6 +584,11 @@ form {
     }
 }
 
+input:focus:invalid,
+textarea:focus:invalid {
+    border: 2px solid #e52020;
+}
+
 input, textarea {
     width: 95%;
     border: 0;
@@ -627,4 +632,8 @@ footer {
 footer p {
     padding: 10px 0;
     color: #fdf9ff;
+}
+
+footer p span {
+    text-transform: uppercase;
 }

@@ -14,6 +14,7 @@ $('#center-info button').click(function () {
         scrollTop: $('#contact').offset().top}, 800);
 });
 
+//Onclick event listener for mobile menu button
 $('.nav-btn').click(function () {
     $('.nav-list').toggleClass("show");
 });

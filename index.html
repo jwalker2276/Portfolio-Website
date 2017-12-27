@@ -40,7 +40,7 @@
             <div class="animation-element accent"></div>
             <div class="flex">
                 <div class="skill-set">
-                    <i class="fa fa-paint-brush skill-icon" aria-hidden="true"></i><!-- TODO: change icon -->
+                    <i class="fa fa-paint-brush skill-icon" aria-hidden="true"></i>
                     <h2>Design</h2>
                     <p>I love transforming ideas into clean intuitive experiences and learning about the latest ui/ux designs.</p>
                 </div>
@@ -168,19 +168,19 @@
             <img class="transition-img"src="images/pagearrow.svg" alt="">
         </div>
 
-        <section id="contact">
+        <section id="contact"> <!-- TODO: Test -->
             <h1  class="animation-element slide-right">Contact me</h1>
             <div  class="animation-element accent"></div>
-            <form action="index.html" method="post">
-                <input type="text" name="" value="" placeholder="Name">
-                <input type="text" name="" value="" placeholder="Email">
-                <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
-                <button type="button" name="button">Send</button>
+            <form action="https://formspree.io/jwalkercreations@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="_replyto" placeholder="Email" required>
+                <textarea type="text" name="message" rows="8" cols="80" placeholder="Message" required></textarea>
+                <button type="button" name="button" value="Send">Send</button>
             </form>
         </section>
 
         <footer>
-            <p>Made with love by <span class="name-color-change">Jordan Walker</span> 2017</p>
+            <p>Created by <span class="name-color-change">Jordan Walker</span> 2017</p>
         </footer>
 
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
