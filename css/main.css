@@ -365,7 +365,7 @@ section:nth-of-type(1) div p {
     background-position: center;
     background-size: cover;
     background-color:  #fdf9ff;
-    height: 250px;
+    height: 400px;
 }
 
 .img-info {
@@ -424,35 +424,20 @@ section:nth-of-type(1) div p {
 }
 
 .image:nth-of-type(1) {
-    background-image: url(../images/project1.jpg);
-}
-.image:nth-of-type(2) {
-    background-image: url(../images/project2w.jpg);
-}
-.image:nth-of-type(3) {
-    background-image: url(../images/project3.jpg);
-}
-.image:nth-of-type(4) {
-    background-image: url(../images/project4w.jpg);
-}
-.image:nth-of-type(5) {
     background-image: url(../images/project5.jpg);
 }
-.image:nth-of-type(6) {
+.image:nth-of-type(2) {
     background-image: url(../images/project6.jpg);
 }
-.image:nth-of-type(7) {
+.image:nth-of-type(3) {
     background-image: url(../images/project7.jpg);
 }
-.image:nth-of-type(8) {
+.image:nth-of-type(4) {
     background-image: url(../images/project8.jpg);
-}
-.image:nth-of-type(9) {
-    background-image: url(../images/project9w.jpg);
 }
 
 .img-reg {
-    flex-basis: 25%;
+    flex-basis: 50%;
 }
 .img-wide {
     flex-basis: 50%;
