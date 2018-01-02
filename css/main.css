@@ -26,16 +26,16 @@ i {
 }
 
 section {
-    padding: 150px 20%;
+    padding: 125px 20%;
 }
 @media screen and (max-width: 1150px) {
     section{
-        padding: 150px 10%;
+        padding: 100px 10%;
     }
 }
 @media screen and (max-width: 880px) {
     section{
-        padding: 150px 1%;
+        padding: 90px 1%;
     }
 }
 
@@ -59,18 +59,21 @@ button:focus {
 
 /*General Animations*/
 .animation-element.slide-left {
-    transform: translateX(-1500px);
-    transition: transform 1s ease-in-out;
+    transform: translateX(-250px);
+    opacity: 0.0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .animation-element.slide-right {
-    transform: translateX(1500px);
-    transition: transform 1s ease-in-out;
+    transform: translateX(250px);
+    opacity: 0.0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .animation-element.slide-left.animated,
 .animation-element.slide-right.animated {
     transform: translateX(0px);
+    opacity: 1.0;
 }
 
 /*Accent under each section title*/
@@ -94,11 +97,19 @@ h1 {
     font-size: 48px;
     text-align: center;
     text-transform: uppercase;
-
 }
 
 h2 {
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 880px) {
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 18px;
+    }
 }
 
 /*Nav Styles*/
@@ -121,8 +132,14 @@ nav {
     justify-content:space-between;
     padding: 5px 10px;
     background-color:  #393e41;
-    opacity: 0.9;
+    opacity: 0.0;
     max-width: 1120px;
+    animation: fadein 1s ease-in 0.5s 1 forwards;
+}
+
+@keyframes fadein {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
 }
 
 #brand {
@@ -196,7 +213,8 @@ nav ul li {
     }
 
     #brand {
-        font-size: 24px;
+        padding-top: 4px;
+        font-size: 16px;
     }
 
     .nav-btn {
@@ -204,8 +222,18 @@ nav ul li {
     }
 }
 
+/* Canvas Styles */
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
 /*Hero Styles*/
 #hero {
+    padding: 0 20%;
     height: 100vh;
     background-color: #393e41;
 }
@@ -214,11 +242,12 @@ nav ul li {
     margin: auto;
     text-align: center;
     font-size: 48px;
+    z-index: 5;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     #center-info {
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 
@@ -243,6 +272,12 @@ section:nth-of-type(1) div p {
     border-color 1s ease-in-out,
     box-shadow .2s ease-in-out,
     transform .2s linear;
+}
+
+@media screen and (max-width: 880px) {
+    .contact-me-btn {
+        font-size: 18px;
+    }
 }
 
 .contact-me-btn:hover {
@@ -321,8 +356,14 @@ section:nth-of-type(1) div p {
     width: 15%;
     min-width: 100px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 2px;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 880px) {
+    .title-box {
+        font-size: 14px;
+    }
 }
 
 .skill-fill-1 {
@@ -478,19 +519,6 @@ section:nth-of-type(4) div:nth-of-type(2){
     margin-top: 75px;
 }
 
-@media screen and (max-width: 800px) {
-    section:nth-of-type(4) div:nth-of-type(2){
-        flex-direction: column;
-        align-items: center;
-    }
-    #about-right {
-        padding-top: 20px;
-    }
-    #about-right p {
-        max-width: 400px;
-    }
-}
-
 #about-right {
     flex-basis: 50%;
     display: flex;
@@ -507,6 +535,19 @@ section:nth-of-type(4) div:nth-of-type(2){
 
 #about-right div {
     padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    section:nth-of-type(4) div:nth-of-type(2){
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-right {
+        padding-top: 40px;
+    }
+    #about-right p {
+        max-width: 400px;
+    }
 }
 
 .find-me-btn{
@@ -615,7 +656,7 @@ footer {
 }
 
 footer p {
-    padding: 10px 0;
+    padding: 25px 0;
     color: #fdf9ff;
 }
 

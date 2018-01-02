@@ -19,7 +19,6 @@ $('.nav-btn').click(function () {
     $('.nav-list').toggleClass("show");
 });
 
-
 //Function checks to see if section is in view for animations
 function check_if_in_view() {
     var win_height = $win.height();
