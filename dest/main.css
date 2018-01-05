@@ -64,23 +64,47 @@ button:focus {
 
 /*General Animations*/
 .animation-element.slide-left {
-    -webkit-transform: translateX(-250px);
-            transform: translateX(-250px);
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
     opacity: 0.0;
     -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
     transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    overflow-x: hidden;
 }
 
 .animation-element.slide-right {
-    -webkit-transform: translateX(250px);
-            transform: translateX(250px);
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
     opacity: 0.0;
     -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
     transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 400px) {
+    .animation-element.slide-left {
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+        opacity: 0.0;
+        -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+        transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    }
+
+    .animation-element.slide-right {
+        -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+        opacity: 0.0;
+        -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+        transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    }
 }
 
 .animation-element.slide-left.animated,
@@ -149,7 +173,7 @@ nav {
     -webkit-box-pack:justify;
         -ms-flex-pack:justify;
             justify-content:space-between;
-    padding: 5px 10px;
+    padding: 5px 20px;
     background-color:  #393e41;
     opacity: 0.0;
     max-width: 1120px;
@@ -196,8 +220,8 @@ nav ul li {
 }
 
 .nav-list {
-    -webkit-transition: height .75s ease-in-out;
-    transition: height .75s ease-in-out;
+    -webkit-transition: height .25s ease-in-out;
+    transition: height .25s ease-in-out;
 }
 
 .show {

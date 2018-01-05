@@ -59,15 +59,31 @@ button:focus {
 
 /*General Animations*/
 .animation-element.slide-left {
-    transform: translateX(-250px);
+    transform: translateX(-150px);
     opacity: 0.0;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    overflow-x: hidden;
 }
 
 .animation-element.slide-right {
-    transform: translateX(250px);
+    transform: translateX(150px);
     opacity: 0.0;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 400px) {
+    .animation-element.slide-left {
+        transform: translateX(-50px);
+        opacity: 0.0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+
+    .animation-element.slide-right {
+        transform: translateX(50px);
+        opacity: 0.0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
 }
 
 .animation-element.slide-left.animated,
@@ -130,7 +146,7 @@ header {
 nav {
     display: flex;
     justify-content:space-between;
-    padding: 5px 10px;
+    padding: 5px 20px;
     background-color:  #393e41;
     opacity: 0.0;
     max-width: 1120px;
@@ -167,7 +183,7 @@ nav ul li {
 }
 
 .nav-list {
-    transition: height .75s ease-in-out;
+    transition: height .25s ease-in-out;
 }
 
 .show {

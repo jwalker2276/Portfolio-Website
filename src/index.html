@@ -7,10 +7,11 @@
         <script src="https://use.fontawesome.com/0bc9b90e1c.js"></script>
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+        <link rel="shortcut icon" href="jwalkercreations_favicon.ico" type="image/x-icon">
     </head>
 
     <body>
-
+        <!-- Nav bar -->
         <header id="nav-bar">
             <nav>
                 <h2 id="brand">jwalkercreations</h2>
@@ -24,7 +25,7 @@
                 <i class="fa fa-bars fa-2x nav-btn" aria-hidden="true"></i>
             </nav>
         </header>
-
+        <!-- Hero Section -->
         <section id="hero" class="flex">
             <div class="canvas">
                 <canvas id="#canvas"></canvas>
@@ -37,7 +38,7 @@
                 </button>
             </div>
         </section>
-
+        <!-- Skills Section -->
         <section id="skills"> <!-- TODO: Content -->
             <h1 class="animation-element slide-left">Skills</h1>
             <div class="animation-element accent"></div>
@@ -76,7 +77,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- Projects Section -->
         <section id="projects"> <!-- TODO:images and content-->
             <h1 class="animation-element slide-right">Projects</h1>
             <div  class="animation-element accent"></div>
@@ -85,56 +86,59 @@
                     <div class="img-info">
                         <h3>Project Coming Soon</h3>
                         <button type="button" name="button">Check it out</button>
-                        <h4></h4>
+                        <h4>Project info coming soon</h4>
                     </div>
                 </div>
                 <div class="image img-reg">
                     <div class="img-info">
                         <h3>Project Coming Soon</h3>
                         <button type="button" name="button">Check it out</button>
-                        <h4></h4>
+                        <h4>Project info coming soon</h4>
                     </div>
                 </div>
                 <div class="image img-reg">
                     <div class="img-info">
                         <h3>Project Coming Soon</h3>
                         <button type="button" name="button">Check it out</button>
-                        <h4></h4>
+                        <h4>Project info coming soon</h4>
                     </div>
                 </div>
                 <div class="image img-reg">
                     <div class="img-info">
                         <h3>Project Coming Soon</h3>
                         <button type="button" name="button">Check it out</button>
-                        <h4></h4>
+                        <h4>Project info coming soon</h4>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!-- About Section -->
         <section id="about">
             <h1 class="animation-element  slide-left">About</h1>
             <div class="animation-element accent"></div>
             <div class="flex">
-                <img id="about-left" src="images/ProfilePic.jpg" alt="">
+                <img id="about-left"
+                    srcset ="images/ProfilePic.jpg 400w"
+                    sizes="(max-width: 400px) 200px"
+                    src="images/ProfilePic.jpg" alt="">
                 <div id="about-right">
                     <p>Since 2010, I have been creating digital works of art.</p>
                     <p>I have worked with almost every platform creating webpages, mobile apps, video games.</p>
                     <p>I have aurthored software with C++, C#, Java, Javascript, HTML5, CSS3, Python and Assembly and have designed using Adobe Photoshop, Illustrator and Unity.
                     <div>
-                        <button class="find-me-btn"><a href="https://www.linkedin.com/in/jordan-walker-85246458/"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></button>
-                        <button class="find-me-btn"><a href="https://github.com/jwalker2276"><i class="fa fa-github" aria-hidden="true"></i>Github</a></button>
-                        <button class="find-me-btn"><a href="https://codepen.io/jwalker2276/"><i class="fa fa-codepen" aria-hidden="true"></i>Codepen</a></button>
-                        <button class="find-me-btn"><a href="https://www.visualcv.com/z3xdr4y_g0m"><i class="fa fa-paperclip" aria-hidden="true"></i>Resume</a></button>
+                        <button class="find-me-btn"><a href="https://www.linkedin.com/in/jordan-walker-85246458/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></button>
+                        <button class="find-me-btn"><a href="https://github.com/jwalker2276" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Github</a></button>
+                        <button class="find-me-btn"><a href="https://codepen.io/jwalker2276/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i>Codepen</a></button>
+                        <button class="find-me-btn"><a href="#" target="_blank"><i class="fa fa-paperclip" aria-hidden="true"></i>Resume</a></button>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!-- Transition arrow svg element -->
         <div>
             <img class="transition-img"src="images/pagearrow.svg" alt="">
         </div>
-
+        <!-- Contact Section -->
         <section id="contact"> <!-- TODO: Test -->
             <h1  class="animation-element slide-right">Contact me</h1>
             <div  class="animation-element accent"></div>
@@ -145,11 +149,11 @@
                 <button type="button" name="button" value="Send">Send</button>
             </form>
         </section>
-
+        <!-- Footer -->
         <footer>
             <p>Created by <span class="name-color-change">Jordan Walker</span><i class="fa fa-copyright" aria-hidden="true"></i>   2017</p>
         </footer>
-
+        <!-- Scripts -->
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/godPixel.js"></script>
