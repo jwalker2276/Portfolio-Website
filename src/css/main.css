@@ -74,15 +74,15 @@ button:focus {
 
 @media screen and (max-width: 400px) {
     .animation-element.slide-left {
-        transform: translateX(-50px);
+        transform: translateX(0px);
         opacity: 0.0;
-        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        transition:  opacity 1s ease-in-out;
     }
 
     .animation-element.slide-right {
-        transform: translateX(50px);
+        transform: translateX(0px);
         opacity: 0.0;
-        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        transition:  opacity 1s ease-in-out;
     }
 }
 
@@ -121,7 +121,7 @@ h2 {
 
 @media screen and (max-width: 880px) {
     h1 {
-        font-size: 26px;
+        font-size: 36px;
     }
     h2 {
         font-size: 18px;
@@ -208,7 +208,7 @@ nav ul li {
 
 @media screen and (max-width: 880px) {
     header {
-        width: 100%;
+        width: 100vw;
         padding: 0px 0%;
     }
 

@@ -1,6 +1,11 @@
 var $animation_elements = $('.animation-element');
 var $win = $(window);
 
+//Onclick event listener for mobile menu button
+$('.nav-btn').click(function () {
+    $('.nav-list').toggleClass("show");
+});
+
 //Onclick event listener for scrolling
 $('.section-link').click(function(){
     var section = $(this).attr("dest");
@@ -12,11 +17,6 @@ $('.section-link').click(function(){
 $('#center-info button').click(function () {
     $('html, body').animate({
         scrollTop: $('#contact').offset().top}, 800);
-});
-
-//Onclick event listener for mobile menu button
-$('.nav-btn').click(function () {
-    $('.nav-list').toggleClass("show");
 });
 
 //Function checks to see if section is in view for animations
