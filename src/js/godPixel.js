@@ -115,11 +115,9 @@ function init() {
     if(heroWidth > 1000) {
         //High performance canvas
         totalPixels = 50;
-        console.log("running higher performance version");
     } else {
         //Low performance canvas
         totalPixels = 10;
-        console.log("running lower performance version");
     }
 
     let x = 0,
