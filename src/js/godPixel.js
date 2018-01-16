@@ -1,18 +1,18 @@
 "use strict"
 
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-var circleFillColor = 'rgba(57, 62, 65, .3)'; //#393e41
-var circleStrokeColor = 'rgba(253, 249, 255, .3)'; //#fdf9ff
-var lineColor = 'rgba(229, 32, 32, .3)'; //#e52020';
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+const circleFillColor = 'rgba(57, 62, 65, .3)'; //#393e41
+const circleStrokeColor = 'rgba(253, 249, 255, .3)'; //#fdf9ff
+const lineColor = 'rgba(229, 32, 32, .3)'; //#e52020';
 
-var heroWidth = document.querySelector('.canvas').offsetWidth;
-var heroHeight = document.querySelector('.canvas').offsetHeight;
+let heroWidth = document.querySelector('.canvas').offsetWidth;
+let heroHeight = document.querySelector('.canvas').offsetHeight;
 
-var btn = document.querySelector('.contact-me-btn');
-var btnObj = btn.getBoundingClientRect();
-var btnX = 0;
-var btnY = 0;
+const btn = document.querySelector('.contact-me-btn');
+let btnObj = btn.getBoundingClientRect();
+let btnX = 0;
+let btnY = 0;
 
 ctx.lineWidth = .5;
 
@@ -59,11 +59,11 @@ Pixel.prototype = {
     },
 
     line: function () {
-        var connectionRadius = 200;
-        for(var i = 0; i < pixelsArray.length; i++) {
-            var pX = pixelsArray[i].x;
-            var pY = pixelsArray[i].y;
-            //Quad 2
+        const connectionRadius = 200;
+        for(let i = 0; i < pixelsArray.length; i++) {
+            let pX = pixelsArray[i].x;
+            let pY = pixelsArray[i].y;
+            //Check for connections
             if((godPixel.x - pX < connectionRadius) && (godPixel.x - pX > -connectionRadius)) {
                 if((godPixel.y - pY < connectionRadius) && (godPixel.y - pY > -connectionRadius)) {
                     ctx.beginPath();
@@ -79,10 +79,10 @@ Pixel.prototype = {
 //End of Class
 
 //Pixels array
-var pixelsArray = [];
+let pixelsArray = [];
 
 //Godpixel Object
-var godPixel = {
+let godPixel = {
     x : 0,
     y : 0,
     radius : 5
@@ -108,8 +108,21 @@ function init() {
     //Clear pixelArray
     pixelsArray = [];
 
-    var totalPixels = 50;
-    var x = 0,
+    //Total pixel circle on screen
+    let totalPixels = 0;
+
+    //Check width of canvas
+    if(heroWidth > 1000) {
+        //High performance canvas
+        totalPixels = 50;
+        console.log("running higher performance version");
+    } else {
+        //Low performance canvas
+        totalPixels = 10;
+        console.log("running lower performance version");
+    }
+
+    let x = 0,
         y = 0,
         dx = 0,
         dy = 0,
@@ -117,7 +130,7 @@ function init() {
         velocity = 2;
 
     //Get init values
-    for (var i = 0; i < totalPixels; i++) {
+    for (let i = 0; i < totalPixels; i++) {
         radius = Math.random() * 6;
         x = Math.random() * window.innerWidth;
         y = Math.random() * window.innerHeight;
@@ -133,7 +146,7 @@ function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-    for(var i = 0; i < pixelsArray.length; i++) {
+    for(let i = 0; i < pixelsArray.length; i++) {
         pixelsArray[i].line();
         pixelsArray[i].update();
     }
