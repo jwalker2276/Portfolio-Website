@@ -11,11 +11,11 @@ const babel = require('gulp-babel');
 const paths = {
   styles: {
     src: 'src/css/**/*.css',
-    dest: 'dest/',
+    dest: 'assets/',
   },
   scripts: {
     src: 'src/js/**/*.js',
-    dest: 'dest/',
+    dest: 'assets/',
   },
   markup: {
     src: 'index.html',

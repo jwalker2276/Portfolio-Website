@@ -1,0 +1,365 @@
+ :root {
+  --background: #414345;
+  --tile-bk: #262627;
+  --tile-head: #4b4b4b;
+  --county-outline: #0e0e0f;
+  --font: #ebebeb;
+  --accent: #fed976;
+  --marginAmount: 20px;
+}
+
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100% - var(--marginAmount));
+  width: calc(100% - var(--marginAmount));
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  /* background: linear-gradient(#232526, #414345, #232526); */
+  background-color: var(--background);
+  color: var(--font);
+  margin: var(--marginAmount);
+}
+
+@media screen and (max-width: 1680px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  :root {
+    --marginAmount: 10px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Page Grid */
+.grid-wrapper {
+  height: 100%;
+  display: grid;
+  grid-gap: var(--marginAmount);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-areas:
+    'header project-info'
+    'info-input population'
+    'map table'
+    'map graph';
+}
+
+
+@media screen and (max-width: 1024px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
+  }
+}
+
+/* Class to hide county data until user interacts */
+.hidden {
+  opacity: 0.0;
+}
+
+.tile {
+  background-color: var(--tile-bk);
+  -webkit-box-shadow: 7px 10px 2px 0px rgba(0,0,0,0.1);
+          box-shadow: 7px 10px 2px 0px rgba(0,0,0,0.1);
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Header */
+header {
+  grid-column: 1 / -2;
+}
+
+/* Title */
+header > h2 {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+header > p {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+/* Data Btn */
+.project-data {
+  grid-area: project-info;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-data > p {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.project-data > a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+/* Map Controls */
+.info-input {
+  grid-area: info-input;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'label1 map-input year';
+}
+
+.info-input > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Title */
+.label-heatmap {
+  font-size: 1.5em;
+  font-weight: 400;
+  grid-area: label1;
+}
+
+/* Year */
+.info-input > p {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.selected-year {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.input-container {
+  grid-area: map-input;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.input-container > p {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--font);
+}
+
+/* Slider */
+input.year {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--background);
+  cursor: pointer;
+}
+
+input.year::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+input.year::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+input.year::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+.info-year {
+  grid-area: year;
+}
+/* End of map controls */
+
+/* Map*/
+.map {
+  grid-area: map;
+}
+
+.texas-info {
+  grid-area: population;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.texas-info > p {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.county-info {
+  grid-area: table;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'table';
+}
+
+.county-info > h3 {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.county-data-table{
+  justify-self: stretch;
+  align-self: stretch;
+  display: grid;
+  grid-template-areas:
+    'year pop'
+    'year0 pop0'
+    'year1 pop1'
+    'year2 pop2'
+    'year3 pop3'
+    'year4 pop4'
+    'year5 pop5'
+    'year6 pop6';
+}
+
+.colored-text {
+  color: var(--accent);
+}
+
+.table-heading {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.table-data {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* Line Graph */
+.graph {
+  grid-area: graph;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'graph';
+}
+
+.graph-title {
+  grid-area: header;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.graph-container {
+  grid-area: graph;
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Line path itself */
+.line-chart {
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: .5px;
+}
+
+/* Labels for x and y axis */
+.x-label, .y-label {
+  fill: white;
+  stroke: rgba(0,0,0,0); /* Override parent */
+}
+
+.y-label {
+  margin-left: 0px;
+}
+
+/* Map paths that outline the counties */
+path {
+  stroke: var(--county-outline);
+  stroke-width: 0.50px;
+}
+
+/* Lines paths for graph */
+.x-axis path, .y-axis path {
+  stroke: var(--font);
+  stroke-width: 1px;
+}
+
+/* Tick text for line graph */
+.tick > text, line {
+  fill: white;
+  stroke: rgba(0,0,0,0);
+  font-size: 1.0em;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: var(--tile-bk);
+  border: 5px solid var(--background);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.tooltip p {
+  margin: 0;
+}
+
+.tooltip:before {
+  content: ' ';
+  position: absolute;
+  border: 12px solid transparent;
+  border-bottom-color: var(--font);
+  top: -30px;
+  left: 50%;
+  margin-left: -6px;
+}
