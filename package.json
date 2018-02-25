@@ -16,9 +16,15 @@
     "url": "https://github.com/jwalker2276/Portfolio-Website/issues"
   },
   "homepage": "https://github.com/jwalker2276/Portfolio-Website#readme",
+  "dependencies": {},
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
     "gulp-postcss": "^7.0.1"
   }
 }

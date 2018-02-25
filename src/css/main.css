@@ -7,7 +7,7 @@
 html {
     color: #fdf9ff;
 }
-
+/* Styles */
 body {
     background-color: #393e41;
     font-family: 'Muli', sans-serif;
@@ -418,6 +418,8 @@ section:nth-of-type(1) div p {
     flex-wrap: wrap;
     margin-top: 75px;
     width: 100%;
+    /* Added to center one card */
+    justify-content: center;
 }
 
 .image {
@@ -445,6 +447,14 @@ section:nth-of-type(1) div p {
 
 .img-info h3, .img-info h4 {
     color: #fdf9ff;
+}
+
+.img-info h3 {
+  font-size: 24px;
+}
+
+.img-info h4 {
+  font-size: 18px;
 }
 
 .img-info h3{
@@ -479,21 +489,21 @@ section:nth-of-type(1) div p {
 
 .img-info:hover button {
     background-color: rgba(0,0,0,0);
-    border: 2px solid #fdf9ff;
+    border: 5px solid #fdf9ff;
     color: #fdf9ff;
 }
 
 .image:nth-of-type(1) {
-    background-image: url(../images/project5.jpg);
+    background-image: url(../src/images/d3Project.jpg);
 }
 .image:nth-of-type(2) {
-    background-image: url(../images/project6.jpg);
+  background-image: url(../src/images/project6.jpg);
 }
 .image:nth-of-type(3) {
-    background-image: url(../images/project7.jpg);
+    background-image: url(../src/images/project7.jpg);
 }
 .image:nth-of-type(4) {
-    background-image: url(../images/project8.jpg);
+    background-image: url(../src/images/project8.jpg);
 }
 
 .img-reg {
