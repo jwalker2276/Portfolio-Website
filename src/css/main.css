@@ -14,6 +14,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #393e41;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
 }
 
 a {
@@ -133,26 +136,29 @@ h2 {
 
 /*Nav Styles*/
 header {
+  box-sizing: content-box;
   position: fixed;
-  top: 0;
-  left: 0;
+  /* top: 0; */
+  /* left: 0; */
   background-color: #393e41;
   color: #fdf9ff;
   text-transform: uppercase;
   font-size: 16px;
-  width: 60%;
-  padding: 10px 20% 0;
+  /* padding: 10px 20% 0; */
+  width: 100%;
+  max-width: 1600px;
   margin: auto;
   z-index: 100;
 }
 
 nav {
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 15px 15px;
   background-color: #393e41;
   opacity: 0;
-  max-width: 1120px;
   animation: fadein 1s ease-in 0.5s 1 forwards;
 }
 
@@ -208,14 +214,14 @@ nav ul li {
 
 @media screen and (max-width: 1150px) {
   header {
-    width: 80%;
-    padding: 0px 10%;
+    width: 100%;
+    padding: 0px 0%;
   }
 }
 
 @media screen and (max-width: 880px) {
   header {
-    width: 100vw;
+    width: 100%;
     padding: 0px 0%;
   }
 
@@ -363,6 +369,7 @@ section:nth-of-type(1) div p {
 .lists ul {
   list-style: none;
   flex-basis: 33%;
+  padding: 15px 0;
 }
 
 .lists ul li {

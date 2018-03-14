@@ -14,6 +14,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #393e41;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
 }
 
 a {
@@ -154,30 +157,35 @@ h2 {
 
 /*Nav Styles*/
 header {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   position: fixed;
-  top: 0;
-  left: 0;
+  /* top: 0; */
+  /* left: 0; */
   background-color: #393e41;
   color: #fdf9ff;
   text-transform: uppercase;
   font-size: 16px;
-  width: 60%;
-  padding: 10px 20% 0;
+  /* padding: 10px 20% 0; */
+  width: 100%;
+  max-width: 1600px;
   margin: auto;
   z-index: 100;
 }
 
 nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px 20px;
+  padding: 15px 15px;
   background-color: #393e41;
   opacity: 0;
-  max-width: 1120px;
   -webkit-animation: fadein 1s ease-in 0.5s 1 forwards;
           animation: fadein 1s ease-in 0.5s 1 forwards;
 }
@@ -249,14 +257,14 @@ nav ul li {
 
 @media screen and (max-width: 1150px) {
   header {
-    width: 80%;
-    padding: 0px 10%;
+    width: 100%;
+    padding: 0px 0%;
   }
 }
 
 @media screen and (max-width: 880px) {
   header {
-    width: 100vw;
+    width: 100%;
     padding: 0px 0%;
   }
 
@@ -389,85 +397,6 @@ section:nth-of-type(1) div p {
           transform: rotate(0.25turn);
 }
 
-/*Skills Styles*/
-/* #skills {
-    background-color: #fdf9ff;
-    color: #393e41;
-}
-
-.skill-set {
-    text-align: center;
-    padding: 60px 100px;
-}
-
-@media screen and (max-width: 625px) {
-    .skill-set{
-        padding: 30px 100px;
-    }
-}
-
-.skill-set * {
-    padding: 10px 0;
-}
-
-.skill-icon {
-    font-size: 40px;
-    color: #e52020;
-}
-
-.skill-bars-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skill-bar {
-    height: 25px;
-    width: 100%;
-    display: flex;
-    border: 2px solid #393e41;
-    background-color: #e6e3e8;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.title-box {
-    background-color: #393e41;
-    color:#fdf9ff;
-    width: 15%;
-    min-width: 100px;
-    text-align: center;
-    padding-top: 2px;
-    text-transform: uppercase;
-}
-
-@media screen and (max-width: 880px) {
-    .title-box {
-        font-size: 14px;
-    }
-}
-
-.skill-fill-1 {
-    background-color:  #e52020;
-    width: 60%;
-}
-.skill-fill-2 {
-    background-color:  #e52020;
-    width: 60%;
-}
-.skill-fill-3 {
-    background-color:  #e52020;
-    width: 40%;
-}
-.skill-fill-4 {
-    background-color:  #e52020;
-    width: 30%;
-}
-.skill-fill-5 {
-    background-color:  #e52020;
-    width: 80%;
-} */
-
 /* Skill set */
 
 #skills {
@@ -509,6 +438,7 @@ section:nth-of-type(1) div p {
   list-style: none;
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
+  padding: 15px 0;
 }
 
 .lists ul li {
