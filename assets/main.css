@@ -436,21 +436,35 @@ section:nth-of-type(1) div p {
 
 .lists ul {
   list-style: none;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   padding: 15px 0;
+  color: #393e41;
+  line-height: 1.5;
 }
 
-.lists ul li {
-  line-height: 1.5;
-  color: #393e41;
+.list-title-left {
+  -webkit-box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.list-title-center {
+  -webkit-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.list-title-right {
+  -webkit-box-shadow: -5px 5px 2px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: -5px 5px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
 .list-title {
   font-weight: 700;
   font-size: 24px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  background-color: #393e41;
+  color: #e6e3e8;
 }
 
 /*Projects Styles*/
