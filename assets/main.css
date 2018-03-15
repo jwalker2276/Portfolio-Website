@@ -434,13 +434,20 @@ section:nth-of-type(1) div p {
   text-align: center;
 }
 
-.lists ul {
+.lists ul.animation-element {
   list-style: none;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   padding: 15px 0;
   color: #393e41;
   line-height: 1.5;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in 2s;
+  transition: opacity 1s ease-in 2s;
+}
+
+.lists ul.animation-element.animated {
+  opacity: 1;
 }
 
 .list-title-left {
@@ -465,6 +472,28 @@ section:nth-of-type(1) div p {
   text-transform: uppercase;
   background-color: #393e41;
   color: #e6e3e8;
+}
+
+@media screen and (max-width: 600px) {
+  .list-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .list-title-left,
+  .list-title-center,
+  .list-title-right {
+    -webkit-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /*Projects Styles*/
