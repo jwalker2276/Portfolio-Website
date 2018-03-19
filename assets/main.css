@@ -502,6 +502,16 @@ section:nth-of-type(1) div p {
   background-color: #e6e3e8;
 }
 
+/* #grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  width: 100%;
+  /* Added to center one card */
+/* justify-content: center; */
+/* } */
+
 #grid {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -518,15 +528,35 @@ section:nth-of-type(1) div p {
           justify-content: center;
 }
 
-.image {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.project-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background-color: #fdf9ff;
-  height: 400px;
 }
 
-.img-info {
+.image-wrapper {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #262628;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-info {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,131 +564,80 @@ section:nth-of-type(1) div p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: background-color 0.25s ease-in;
-  transition: background-color 0.25s ease-in;
-  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.img-info:hover {
-  background-color: #393e41;
-  opacity: 0.98;
+.project-info h3 {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.img-info h3,
-.img-info h4 {
-  color: #fdf9ff;
+.project-list-title {
+  margin-top: 20px;
+  line-height: 1.5;
+  list-style: none;
+  font-weight: 700;
 }
 
-.img-info h3 {
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.img-info h4 {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.img-info h3 {
-  -webkit-transform: translateX(-500px);
-          transform: translateX(-500px);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-.img-info h4 {
-  -webkit-transform: translateX(500px);
-          transform: translateX(500px);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-.img-info:hover h3 {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.img-info:hover h4 {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+.project-info p {
+  line-height: 1.5;
+  padding: 0 15px;
 }
 
 .project-link {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  margin: 30px auto;
   font-size: 16px;
-  font-weight: 400;
-  cursor: pointer;
+  width: 110px;
+  border: 2px solid #393e41;
   background-color: rgba(0, 0, 0, 0);
-  border: 0px solid rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0);
-  padding: 10px;
+  color: #393e41;
+  padding: 10px 2px;
   border-radius: 0;
-  -webkit-transition: border 0.25s ease-in, color 1s ease-in;
-  transition: border 0.25s ease-in, color 1s ease-in;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    color 0.25s ease-in-out, -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s linear;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    color 0.25s ease-in-out, -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s linear;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    box-shadow 0.2s ease-in-out, color 0.25s ease-in-out, transform 0.2s linear;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    box-shadow 0.2s ease-in-out, color 0.25s ease-in-out, transform 0.2s linear, -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s linear;
 }
 
-.img-info:hover .project-link {
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #fdf9ff;
+.project-link:hover {
+  background-color: #393e41;
+  border-color: rgba(0, 0, 0, 0);
   color: #fdf9ff;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.image:nth-of-type(1) {
-  background-image: url(../assets/images/d3Project.jpg);
-}
-.image:nth-of-type(2) {
-  background-image: url(../assets/images/project6.jpg);
-}
-.image:nth-of-type(3) {
-  background-image: url(../assets/images/project7.jpg);
-}
-.image:nth-of-type(4) {
-  background-image: url(../assets/images/project8.jpg);
-}
-
-.img-reg {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-.img-wide {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-@media screen and (max-width: 1100px) {
-  .image {
-    height: 400px;
-  }
-  .img-reg {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .img-wide {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
+.project-link:active {
+  -webkit-box-shadow: 0px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 @media screen and (max-width: 800px) {
-  .img-reg,
-  .img-wide {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .project-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #e6e3e8;
+  }
+  .project-info {
+    padding-top: 50px;
+    max-width: 400px;
+    background-color: #fdf9ff;
   }
 }
 
