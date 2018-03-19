@@ -1,5 +1,6 @@
 {
     "name": "JWalker Creations",
+    "short_name": "JWalker Creations",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -7,12 +8,12 @@
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#fdf9ff",
-    "background_color": "#fdf9ff",
+    "theme_color": "#333333",
+    "background_color": "#333333",
     "display": "standalone"
 }

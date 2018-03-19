@@ -1,38 +1,43 @@
-const gulp = require('gulp');
+const gulp = require("gulp");
 
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
-const browserSync = require('browser-sync');
+const browserSync = require("browser-sync");
 const server = browserSync.create();
 
-const babel = require('gulp-babel');
+const babel = require("gulp-babel");
+
+const uglify = require("gulp-uglify");
 
 const paths = {
   styles: {
-    src: 'src/css/**/*.css',
-    dest: 'assets/',
+    src: "src/css/**/*.css",
+    dest: "assets/"
   },
   scripts: {
-    src: 'src/js/**/*.js',
-    dest: 'assets/',
+    src: "src/js/**/*.js",
+    dest: "assets/"
   },
   markup: {
-    src: 'index.html',
-  },
+    src: "index.html"
+  }
 };
 
 //CSS Pipe
 function styles() {
-  return gulp.src(paths.styles.src)
-    .pipe(postcss([autoprefixer({ browsers: ['last 2 version'] })]))
+  return gulp
+    .src(paths.styles.src)
+    .pipe(postcss([autoprefixer({ browsers: ["last 2 version"] })]))
     .pipe(gulp.dest(paths.styles.dest));
 }
 
 //JS Pipe
 function scripts() {
-  return gulp.src(paths.scripts.src)
-    .pipe(babel({ presets: ['env'] }))
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(babel({ presets: ["env"] }))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
@@ -40,8 +45,8 @@ function scripts() {
 function serverSetup(done) {
   server.init({
     server: {
-      baseDir: './',
-    },
+      baseDir: "./"
+    }
   });
   done();
 }
@@ -68,4 +73,4 @@ function watch() {
 let build = gulp.series(gulp.parallel(styles, scripts), serverSetup, watch);
 
 //Default task
-gulp.task('default', build);
+gulp.task("default", build);
