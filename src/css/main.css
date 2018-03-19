@@ -190,7 +190,7 @@ nav ul li {
 }
 
 .nav-btn {
-  padding: 0;
+  padding-top: 8px;
   display: none;
   cursor: pointer;
 }
