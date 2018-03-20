@@ -39,7 +39,6 @@
   <header id="nav-bar">
     <nav>
       <img src="assets/images/Logo.svg" alt="logo">
-      <!-- <h2 id="brand">jwalkercreations</h2> -->
       <ul class="nav-list">
         <li class="section-link" dest="hero">Home</li>
         <li class="section-link" dest="skills">Skills</li>
@@ -106,7 +105,10 @@
     <div id="grid">
       <div class="project-card">
         <div class="image-wrapper">
-          <img class="project-image" src="/assets/images/d3Project.jpg">
+          <picture>
+            <source srcset='/assets/images/d3Project.jpg' media='(min-width: 400px)'>
+            <img class="project-image" src="/assets/images/d3Project_small.jpg">
+          </picture>
         </div>
         <div class="project-info">
           <h3>Data Visualization</h3>
@@ -131,8 +133,8 @@
       <div id="about-right">
         <p>Since 2010, I have been creating digital works of art.</p>
         <p>I have worked with almost every platform creating webpages, mobile apps and video games.</p>
-        <p>I have authored software with C++, C#, Java, Javascript, HTML5, CSS3, Python and Assembly and have designed using
-          Adobe Photoshop, Illustrator and Unity.
+        <p>I have authored software with C++, C#, Java, Javascript, HTML5, CSS3, Python and Assembly and design using Adobe
+          Photoshop, Illustrator, Figma and Unity.
           <div>
             <div class="find-me-btn">
               <a href="https://www.linkedin.com/in/jordan-walker-85246458/" target="_blank">

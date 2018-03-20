@@ -138,10 +138,7 @@ h2 {
 header {
   box-sizing: content-box;
   position: fixed;
-  background-color: #393e41;
   color: #fdf9ff;
-  text-transform: uppercase;
-  font-size: 16px;
   width: 100%;
   max-width: 1600px;
   margin: auto;
@@ -153,10 +150,16 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 15px;
+  padding: 5px 5px;
   background-color: #393e41;
   opacity: 0;
   animation: fadein 1s ease-in 0.5s 1 forwards;
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    padding: 2px 7px;
+  }
 }
 
 @keyframes fadein {
@@ -209,24 +212,12 @@ nav ul li {
   transition: border-bottom 0.25s ease-in-out 1s;
 }
 
-@media screen and (max-width: 1150px) {
-  header {
-    width: 100%;
-    padding: 0px 0%;
-  }
-}
-
 @media screen and (max-width: 880px) {
-  header {
-    width: 100%;
-    padding: 0px 0%;
-  }
-
   nav ul {
     width: 100%;
     position: absolute;
     height: 0px;
-    top: 40px;
+    top: 65px;
     left: 0;
     text-align: center;
     overflow: hidden;
@@ -238,13 +229,14 @@ nav ul li {
     padding: 18px 0 0 0;
   }
 
-  #brand {
-    padding-top: 4px;
-    font-size: 16px;
-  }
-
   .nav-btn {
     display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav ul {
+    top: 50px;
   }
 }
 
@@ -370,7 +362,7 @@ section:nth-of-type(1) div p {
   color: #393e41;
   line-height: 1.5;
   opacity: 0;
-  transition: opacity 1s ease-in 2s;
+  transition: opacity 1s ease-in 1s;
 }
 
 .lists ul.animation-element.animated {
@@ -505,9 +497,26 @@ section:nth-of-type(1) div p {
     background-color: #e6e3e8;
   }
   .project-info {
-    padding-top: 50px;
+    padding-top: 0px;
     max-width: 400px;
     background-color: #fdf9ff;
+  }
+
+  .image-wrapper {
+    overflow: hidden;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-wrapper {
+    background-color: #e6e3e8;
+    width: 90vw;
+  }
+
+  .project-info {
+    padding-top: 0px;
+    background-color: #e6e3e8;
   }
 }
 
