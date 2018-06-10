@@ -1,14 +1,11 @@
 const gulp = require("gulp");
-
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-
 const browserSync = require("browser-sync");
 const server = browserSync.create();
-
 const babel = require("gulp-babel");
-
 const uglify = require("gulp-uglify");
+const cssnano = require("gulp-cssnano");
 
 const paths = {
   styles: {
@@ -29,6 +26,7 @@ function styles() {
   return gulp
     .src(paths.styles.src)
     .pipe(postcss([autoprefixer({ browsers: ["last 2 version"] })]))
+    .pipe(cssnano())
     .pipe(gulp.dest(paths.styles.dest));
 }
 
@@ -70,7 +68,7 @@ function watch() {
 }
 
 //Default task
-let build = gulp.series(gulp.parallel(styles, scripts), serverSetup, watch);
+const build = gulp.series(gulp.parallel(styles, scripts), serverSetup, watch);
 
 //Default task
 gulp.task("default", build);
