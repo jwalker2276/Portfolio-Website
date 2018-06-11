@@ -558,7 +558,20 @@ section:nth-of-type(1) div p {
 
 @media screen and (max-width: 625px) {
   .project-card {
-    max-width: 70%;
+    max-width: 80%;
+  }
+  .image-wrapper {
+    min-height: 185px;
+  }
+  .project-slice {
+    top: 120px;
+    height: 75px;
+  }
+  .project-info h3 {
+    font-size: 20px;
+  }
+  .project-link {
+    margin: 0px auto;
   }
 }
 
