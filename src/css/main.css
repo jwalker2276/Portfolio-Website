@@ -1,5 +1,4 @@
 /*General Styles*/
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ html {
 }
 
 /* Styles */
-
 body {
   background-color: #393e41;
   font-family: "Muli", sans-serif;
@@ -69,7 +67,6 @@ button:focus {
 }
 
 /*General Animations*/
-
 .animation-element.slide-left {
   transform: translateX(-150px);
   opacity: 0;
@@ -90,6 +87,7 @@ button:focus {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
+
   .animation-element.slide-right {
     transform: translateX(0px);
     opacity: 0;
@@ -104,7 +102,6 @@ button:focus {
 }
 
 /*Accent under each section title*/
-
 .animation-element.accent {
   background-color: #e52020;
   width: 0px;
@@ -118,7 +115,6 @@ button:focus {
 }
 
 /*Section Titles*/
-
 h1 {
   font-family: "Muli", sans-serif;
   font-weight: 700;
@@ -136,13 +132,13 @@ h2 {
   h1 {
     font-size: 36px;
   }
+
   h2 {
     font-size: 18px;
   }
 }
 
 /*Nav Styles*/
-
 header {
   box-sizing: content-box;
   position: fixed;
@@ -174,6 +170,7 @@ nav {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -232,9 +229,11 @@ nav ul li {
     flex-direction: column;
     align-items: center;
   }
+
   nav ul li {
     padding: 18px 0 0 0;
   }
+
   .nav-btn {
     display: block;
   }
@@ -247,7 +246,6 @@ nav ul li {
 }
 
 /* Canvas Styles */
-
 .canvas {
   position: absolute;
   top: 0;
@@ -257,7 +255,6 @@ nav ul li {
 }
 
 /*Hero Styles*/
-
 #hero {
   padding: 0 20%;
   height: 100vh;
@@ -332,7 +329,6 @@ section:nth-of-type(1) div p {
 }
 
 /* Skill set */
-
 #skills {
   background-color: #fdf9ff;
   color: #393e41;
@@ -407,6 +403,7 @@ section:nth-of-type(1) div p {
   .lists {
     flex-direction: column;
   }
+
   .list-title-left,
   .list-title-center,
   .list-title-right {
@@ -415,7 +412,6 @@ section:nth-of-type(1) div p {
 }
 
 /*Projects Styles*/
-
 #projects {
   color: #393e41;
   background-color: #e6e3e8;
@@ -429,7 +425,7 @@ section:nth-of-type(1) div p {
 
 .project-card {
   flex-basis: 50%;
-  max-width: 30%;
+  max-width: 25%;
   background-color: #393e41;
   border-radius: 2px;
   position: relative;
@@ -444,10 +440,14 @@ section:nth-of-type(1) div p {
 }
 
 .project-card:first-of-type .image-wrapper {
-  background-image: url(/assets/images/d3Project.jpg);
+  background-image: url(/assets/images/vindecode.jpg);
 }
 
 .project-card:nth-of-type(2) .image-wrapper {
+  background-image: url(/assets/images/d3Project.jpg);
+}
+
+.project-card:nth-of-type(3) .image-wrapper {
   background-image: url(/assets/images/DevList.svg);
 }
 
@@ -477,14 +477,16 @@ section:nth-of-type(1) div p {
 
 .tech-list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tech-list div {
   background-color: #fdf9fd;
   color: #393e41;
   font-weight: 700;
-  width: 100px;
+  margin: 2px;
+  width: 150px;
   height: 30px;
   display: flex;
   flex-direction: column;
@@ -525,10 +527,12 @@ section:nth-of-type(1) div p {
   .project-info {
     padding: 10px;
   }
+
   .tech-list {
     flex-direction: column;
     align-items: center;
   }
+
   .tech-list div {
     margin: 5px;
     width: 100%;
@@ -539,6 +543,7 @@ section:nth-of-type(1) div p {
   #grid {
     justify-content: space-between;
   }
+
   .project-card {
     max-width: 45%;
   }
@@ -549,6 +554,7 @@ section:nth-of-type(1) div p {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .project-card {
     max-width: 60%;
     flex-basis: 100%;
@@ -560,23 +566,26 @@ section:nth-of-type(1) div p {
   .project-card {
     max-width: 80%;
   }
+
   .image-wrapper {
     min-height: 185px;
   }
+
   .project-slice {
     top: 120px;
     height: 75px;
   }
+
   .project-info h3 {
     font-size: 20px;
   }
+
   .project-link {
     margin: 0px auto;
   }
 }
 
 /*About Styles*/
-
 #about {
   background-color: #fdf9ff;
   color: #393e41;
@@ -617,9 +626,11 @@ section:nth-of-type(4) div:nth-of-type(2) {
     flex-direction: column;
     align-items: center;
   }
+
   #about-right {
     padding-top: 40px;
   }
+
   #about-right p {
     max-width: 400px;
   }
@@ -656,13 +667,11 @@ section:nth-of-type(4) div:nth-of-type(2) {
 }
 
 /*Transition Image styles*/
-
 .transition-img {
   width: 100%;
 }
 
 /*Contact Styles*/
-
 section:nth-of-type(5) h1 {
   color: #fdf9ff;
 }
@@ -722,7 +731,6 @@ form button:active {
 }
 
 /*Footer Styles*/
-
 footer {
   text-align: center;
 }
