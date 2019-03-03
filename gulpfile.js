@@ -1,23 +1,23 @@
-const gulp = require("gulp");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const browserSync = require("browser-sync");
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync');
 const server = browserSync.create();
-const babel = require("gulp-babel");
-const uglify = require("gulp-uglify");
-const cssnano = require("gulp-cssnano");
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const cssnano = require('gulp-cssnano');
 
 const paths = {
   styles: {
-    src: "src/css/**/*.css",
-    dest: "assets/"
+    src: 'src/css/**/*.css',
+    dest: 'assets/'
   },
   scripts: {
-    src: "src/js/**/*.js",
-    dest: "assets/"
+    src: 'src/js/**/*.js',
+    dest: 'assets/'
   },
   markup: {
-    src: "index.html"
+    src: 'index.html'
   }
 };
 
@@ -25,7 +25,7 @@ const paths = {
 function styles() {
   return gulp
     .src(paths.styles.src)
-    .pipe(postcss([autoprefixer({ browsers: ["last 2 version"] })]))
+    .pipe(postcss([autoprefixer({ browsers: ['last 2 version'] })]))
     .pipe(cssnano())
     .pipe(gulp.dest(paths.styles.dest));
 }
@@ -34,7 +34,7 @@ function styles() {
 function scripts() {
   return gulp
     .src(paths.scripts.src)
-    .pipe(babel({ presets: ["env"] }))
+    .pipe(babel({ presets: ['env'] }))
     .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -43,7 +43,7 @@ function scripts() {
 function serverSetup(done) {
   server.init({
     server: {
-      baseDir: "./"
+      baseDir: './'
     }
   });
   done();
@@ -71,4 +71,4 @@ function watch() {
 const build = gulp.series(gulp.parallel(styles, scripts), serverSetup, watch);
 
 //Default task
-gulp.task("default", build);
+gulp.task('default', build);
