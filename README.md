@@ -6,7 +6,7 @@
 
 ## Description
 
-This is the code behind my personal website.
+This is the code behind my old portfolio website.
 
 ## Built With
 
